@@ -21,9 +21,12 @@ pipeline {
             }
         }
 
-        stage('test the app') {
+        stage('testing the app') {
           steps{
-            echo 'testing the app here'
+            sh'''
+              test -f /build/index.html
+              npm test
+            '''
           }
         }
     }
