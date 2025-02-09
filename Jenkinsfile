@@ -20,5 +20,11 @@ pipeline {
                 '''
             }
         }
+
+        stage('test the app') {
+          steps{
+            echo 'testing the app here'
+          }
+        }
     }
 }
